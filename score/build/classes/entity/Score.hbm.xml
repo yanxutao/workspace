@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+    <class name="entity.Score" table="tb_score" catalog="db_score">
+        <id name="scoreId" type="int">
+            <column name="scoreId"/>
+            <generator class="native"/>
+        </id> 
+		<property name="studentId" type="int">
+            <column name="studentId"/>
+        </property> 
+        <property name="courseId" type="int">
+            <column name="courseId"/>
+        </property> 
+        <property name="score" type="double">
+            <column name="score"/>
+        </property> 
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+* {
+	font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body {
+	overflow-y: scroll;
+}
+select {
+    width: 125px
+}
+.clear {
+	clear: left
+}
+.jumbotron {
+    border-style: solid;
+    border-width: 1px;
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+table {
+	table-layout:fixed;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+    <class name="entity.Student" table="tb_student" catalog="db_score">
+        <id name="studentId" type="int">
+            <column name="studentId"/>
+            <generator class="native"/>
+        </id> 
+        <property name="studentNo" type="java.lang.String">
+            <column name="studentNo"/>
+        </property>         
+        <property name="classId" type="int">
+            <column name="classId"/>
+        </property>
+    </class>
+</hibernate-mapping>

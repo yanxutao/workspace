@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuraton DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+   
+<hibernate-configuration>
+
+    <session-factory>
+    
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/db_score?characterEncoding=utf8</property>
+		<property name="connection.username">yanxt</property>		
+		<property name="connection.password">yanxutao</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<mapping resource="entity/User.hbm.xml" />
+		<mapping resource="entity/Grade.hbm.xml" />
+		<mapping resource="entity/Class.hbm.xml" />
+		<mapping resource="entity/Student.hbm.xml" />
+		<mapping resource="entity/Score.hbm.xml" />
+		<mapping resource="entity/Rank.hbm.xml" />
+		<mapping resource="entity/Course.hbm.xml" />
+		
+    </session-factory>
+    
+</hibernate-configuration>

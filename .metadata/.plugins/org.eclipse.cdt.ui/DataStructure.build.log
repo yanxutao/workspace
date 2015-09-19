@@ -1,0 +1,104 @@
+11:09:31 **** Incremental Build of configuration Debug for project DataStructure ****
+make all 
+Building file: ../src/AVLTree.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/AVLTree.d" -MT"src/AVLTree.d" -o "src/AVLTree.o" "../src/AVLTree.c"
+../src/AVLTree.c:7:17: error: expected specifier-qualifier-list before ‘Data’
+     ElementType Data;
+                 ^
+../src/AVLTree.c:11:1: warning: useless storage class specifier in empty declaration
+ };
+ ^
+../src/AVLTree.c: In function ‘GetHeight’:
+../src/AVLTree.c:20:13: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     return A->Height;
+             ^
+../src/AVLTree.c: In function ‘SingleLeftRotation’:
+../src/AVLTree.c:25:18: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     AVLTree B = A->Left;
+                  ^
+../src/AVLTree.c:26:6: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Left = B->Right;
+      ^
+../src/AVLTree.c:26:16: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Left = B->Right;
+                ^
+src/subdir.mk:72: recipe for target 'src/AVLTree.o' failed
+../src/AVLTree.c:27:6: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     B->Right = A;
+      ^
+../src/AVLTree.c:28:6: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+      ^
+../src/AVLTree.c:28:32: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+                                ^
+../src/AVLTree.c:28:52: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+                                                    ^
+../src/AVLTree.c:29:6: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     B->Height = Max(GetHeight(B->Left), A->Height) + 1;
+      ^
+../src/AVLTree.c:29:32: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     B->Height = Max(GetHeight(B->Left), A->Height) + 1;
+                                ^
+../src/AVLTree.c:29:42: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     B->Height = Max(GetHeight(B->Left), A->Height) + 1;
+                                          ^
+../src/AVLTree.c: In function ‘SingleRightRotation’:
+../src/AVLTree.c:36:18: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     AVLTree B = A->Right;
+                  ^
+../src/AVLTree.c:37:6: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Right = B->Left;
+      ^
+../src/AVLTree.c:37:17: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Right = B->Left;
+                 ^
+../src/AVLTree.c:38:6: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     B->Left = A;
+      ^
+../src/AVLTree.c:39:6: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+      ^
+../src/AVLTree.c:39:32: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+                                ^
+../src/AVLTree.c:39:52: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Height = Max(GetHeight(A->Left), GetHeight(A->Right)) + 1;
+                                                    ^
+../src/AVLTree.c:40:6: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     B->Height = Max(GetHeight(B->Right), A->Height) + 1;
+      ^
+../src/AVLTree.c:40:32: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     B->Height = Max(GetHeight(B->Right), A->Height) + 1;
+                                ^
+../src/AVLTree.c:40:43: error: ‘struct AVLTreeNode’ has no member named ‘Height’
+     B->Height = Max(GetHeight(B->Right), A->Height) + 1;
+                                           ^
+../src/AVLTree.c: In function ‘DoubleLeftRightRotation’:
+../src/AVLTree.c:47:6: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Left = SingleRightRotation(A->Left);
+      ^
+../src/AVLTree.c:47:36: error: ‘struct AVLTreeNode’ has no member named ‘Left’
+     A->Left = SingleRightRotation(A->Left);
+                                    ^
+../src/AVLTree.c: In function ‘DoubleRightLeftRotation’:
+../src/AVLTree.c:53:6: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Right = SingleLeftRotation(A->Right);
+      ^
+../src/AVLTree.c:53:36: error: ‘struct AVLTreeNode’ has no member named ‘Right’
+     A->Right = SingleLeftRotation(A->Right);
+                                    ^
+../src/AVLTree.c: At top level:
+../src/AVLTree.c:57:38: error: expected ‘)’ before ‘AVLTree’
+ AVLTree AVL_Insertion(ElementType X, AVLTree T)
+                                      ^
+../src/AVLTree.c: In function ‘GetHeight’:
+../src/AVLTree.c:21:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/AVLTree.o] Error 1
+
+11:09:31 Build Finished (took 122ms)
+
